@@ -51,7 +51,7 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 
 //NAV
-let navTags = document.querySelectorAll('a');
+const navTags = document.querySelectorAll('a');
 navTags[0].textContent = "Service";
 navTags[1].textContent = "Product";
 navTags[2].textContent = "Vision";
@@ -59,6 +59,21 @@ navTags[3].textContent = "Features";
 navTags[4].textContent = "About";
 navTags[5].textContent = "Product";
 
+navTags.forEach(tags => {
+  tags.style.color = "green";
+});
+
+
+
+
+//Utilize .appendChild() and .prepend() to add two new items to the navigation system
+const section = document.createElement("section");
+document.body.appendChild(section);
+
+section.textContent = "Created by yours truly using JS";
+
+const parentElement = document.querySelector("body");
+parentElement.prepend(section); 
 
 
 
@@ -76,6 +91,9 @@ const featuresTitle = document.getElementsByTagName("h4")[0];
 featuresTitle.textContent = ("Features");
 const featuresP = document.getElementsByTagName("p")[0];
 featuresP.textContent = ("Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.");
+
+
+
 
 
 const aboutTitle = document.getElementsByTagName("h4")[1];
